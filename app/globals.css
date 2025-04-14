@@ -1,1 +1,5 @@
 @import "tailwindcss";
+
+.nav-link {
+  @apply cursor-pointer  font-semibold hover:text-slate-700 transition ease-in-out relative;
+}

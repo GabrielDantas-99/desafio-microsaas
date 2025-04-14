@@ -1,4 +1,5 @@
 import { handleAuth } from "@/app/actions/handle-auth";
+import Logo from "@/app/components/logo";
 import LogoutIcon from "@/app/components/logout-icon";
 import { auth } from "@/app/lib/auth";
 import Image from "next/image";
@@ -14,7 +15,7 @@ export default async function DashboardPage() {
     return (
         <div className="flex flex-col h-screen">
             <div className="flex items-center justify-between border-b border-gray-200 w-full px-12 py-4">
-                <h1 className="font-bold text-3xl text-slate-500">logo</h1>
+                <Logo />
                 <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">
                         <Image src={'/user.png'} alt="Imagem de perfil" width={32} height={32} />
