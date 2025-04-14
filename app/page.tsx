@@ -5,6 +5,7 @@ import BenefitsSection from "./(project)/(public)/(sections)/benefits";
 import OurSolutionSection from "./(project)/(public)/(sections)/our-solutions";
 import ContactSection from "./(project)/(public)/(sections)/contact";
 import NavMenu from "./components/nav-menu";
+import Footer from "./components/footer";
 
 export default function Home() {
   return (
@@ -14,12 +15,9 @@ export default function Home() {
         <MainSection />
         <BenefitsSection />
         <OurSolutionSection />
-        <ContactSection />
+        <ContactSection data-aos="fade-up" />
       </main>
-      <footer className="w-full p-8 bg-gray-800 text-white flex justify-between items-center text-sm">
-        <span>© {new Date().getFullYear()} Phantom tecnologia. Todos os direitos reservados.</span>
-        <span>Desenvolvido por Gabriel Dantas</span>
-      </footer>
+      <Footer />
     </>
   );
 }

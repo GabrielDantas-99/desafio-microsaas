@@ -34,12 +34,12 @@ const MainSection = () => {
                 <h1 className="text-4xl drop-shadow-sm">-50%</h1>
                 <p className="drop-shadow-sm">Custos</p>
             </div>
+
             <button
                 className="absolute -bottom-28 z-40 flex flex-col justify-center space-x-2 text-slate-600 hover:text-slate-800 animate-bounce"
                 onClick={() => document.getElementById('next-section')?.scrollIntoView({ behavior: 'smooth' })}
             >
                 <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="lucide lucide-chevrons-down-icon lucide-chevrons-down"><path d="m7 6 5 5 5-5" /><path d="m7 13 5 5 5-5" /></svg>
-
             </button>
         </section>
     );
