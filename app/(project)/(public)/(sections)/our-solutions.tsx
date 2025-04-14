@@ -1,4 +1,4 @@
-const OurSolutionSection = () => {
+const OutSolutions = () => {
     return (
         <section id="our-solution" className="mt-16 w-full px-6 md:px-12 bg-gray-50 py-12 rounded-lg">
             <h2 className="text-3xl font-bold text-center text-slate-700">Por que escolher nossa solução?</h2>
@@ -32,4 +32,4 @@ const OurSolutionSection = () => {
     );
 }
 
-export default OurSolutionSection;
+export default OutSolutions;

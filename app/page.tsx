@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <>
       <NavMenu />
-      <main className="md:px-12 py-6 grid place-items-center mt-16">
+      <main className="md:px-12 py-12 grid place-items-center mt-16 max-w-[1100px] mx-auto px-8">
         <MainSection />
         <BenefitsSection />
         <OurSolutionSection />
