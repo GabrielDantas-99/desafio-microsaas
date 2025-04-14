@@ -14,7 +14,7 @@ export default async function DashboardPage() {
     return (
         <div className="flex flex-col h-screen">
             <div className="flex items-center justify-between border-b border-gray-200 w-full px-12 py-4">
-                <h1 className="font-bold text-3xl ">logo</h1>
+                <h1 className="font-bold text-3xl text-slate-500">logo</h1>
                 <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">
                         <Image src={'/user.png'} alt="Imagem de perfil" width={32} height={32} />

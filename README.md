@@ -37,26 +37,36 @@ A estrutura do projeto foi projetada para ser modular e escalável, contendo as 
      - Clientes: Adicionar ID do cliente (AUTH_GOOGLE_ID) e a chave secreta do cliente (AUTH_GOOGLE_SECRET) ao `.env.local`
      - Logotipo: Adicionar somente ao subir para produção
 
-3. **Estruturação do Projeto**
+3. **Configuração de armazenamento**
+
+   - [ ] Instalar a ferramenta do Firebase: `npm install firebase-admin` ou `npm install @auth/firebase-adapter firebase-admin`
+   - [ ] Configurar `lib/firebase.ts` (FIREBASE_PROJECT_ID, FIREBASE_CLIENT_EMAIL, FIREBASE_PRIVATE_KEY)
+   - [ ] No Google Firestore, Criar banco de dados
+   - [ ] Visão geral do projeto > Configurações do projeto > Contas e Serviço > Gerar nova chave privada
+   - [ ] Passar: project_id, client_email e private_key do arquivo baixado para as variaveis de ambiente. Obs: Remover os \n da private_key e decodifica-la para base64 em [base64encode](https://www.base64encode.org/)
+   - [ ] Instalar o adapter do Firebase: `npm install @auth/firebase-adapter`
+   - [ ] Adicionar o adapter à configuração do NextAuth `lib/auth.ts`
+
+4. **Estruturação do Projeto**
 
    - [ ] Defina os componentes principais na pasta `components/`.
    - [ ] Configure as rotas e páginas iniciais na pasta `app/`.
 
-4. **Implementação de Funcionalidades**
+5. **Implementação de Funcionalidades**
 
    - [ ] Adicione hooks personalizados na pasta `hooks/`.
    - [ ] Implemente a lógica do servidor na pasta `server/`.
 
-5. **Estilização**
+6. **Estilização**
 
    - [ ] Adicione estilos globais no arquivo `globals.css`.
    - [ ] Crie estilos específicos para componentes conforme necessário.
 
-6. **Testes**
+7. **Testes**
 
    - [ ] Configure e escreva testes para os componentes e funcionalidades principais.
 
-7. **Deploy**
+8. **Deploy**
    - [ ] Configure o ambiente de produção.
    - [ ] Realize o deploy utilizando a plataforma de sua escolha (ex.: Vercel).
 
