@@ -1,36 +1,68 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Template Micro-SaaS
 
-## Getting Started
+Este projeto é um template base para a criação de projetos Micro-SaaS utilizando Next.js. Ele segue uma estrutura de pastas e convenções padronizadas para facilitar o desenvolvimento e a manutenção de projetos futuros.
 
-First, run the development server:
+## Estrutura do Projeto
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+A estrutura do projeto foi projetada para ser modular e escalável, contendo as seguintes pastas principais:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+- `app/`: Contém os componentes e páginas principais do projeto.
+- `public/`: Arquivos estáticos como imagens e ícones.
+- `server/`: Lógica do servidor e APIs.
+- `lib/`: Funções utilitárias e bibliotecas customizadas.
+- `hooks/`: Hooks personalizados para reutilização de lógica.
+- `components/`: Componentes reutilizáveis da interface.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Passo a Passo para Desenvolvimento
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+1. **Configuração Inicial**
 
-## Learn More
+   - [ ] Configure as variáveis de ambiente no arquivo `.env.local`.
+   - [ ] Instale as dependências do projeto com `npm install` ou `yarn install`.
 
-To learn more about Next.js, take a look at the following resources:
+2. **Configuração de authenticação**
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   - [ ] Adicionar o Next Auth. `npm install next-auth@beta`
+   - [ ] Adicionar secret key às variáveis de ambiente `npx auth secret`
+   - [ ] Adicionar variáveis de ambiente do Google (Google Console) `npx auth secret`
+     - [ ] AUTH_GOOGLE_ID
+     - [ ] AUTH_GOOGLE_SECRET
+   - [ ] No Google Console, criar permissão OAuth
+   - [ ] No Google Console, criar um cliente OAuth
+     - Tipo de aplicativo: Aplicativo da Web
+     - Nome
+     - Origens JavaScript autorizadas: Adicionar localhost e dominio da aplicação
+     - URIs de redirecionamento autorizados: dominio.com/api/auth/callback/google
+     - Acesso a dados: Adicionar ou remover escopos (../auth/userinfo.email e .../auth/userinfo.profile)
+     - Clientes: Adicionar ID do cliente (AUTH_GOOGLE_ID) e a chave secreta do cliente (AUTH_GOOGLE_SECRET) ao `.env.local`
+     - Logotipo: Adicionar somente ao subir para produção
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+3. **Estruturação do Projeto**
 
-## Deploy on Vercel
+   - [ ] Defina os componentes principais na pasta `components/`.
+   - [ ] Configure as rotas e páginas iniciais na pasta `app/`.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+4. **Implementação de Funcionalidades**
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+   - [ ] Adicione hooks personalizados na pasta `hooks/`.
+   - [ ] Implemente a lógica do servidor na pasta `server/`.
+
+5. **Estilização**
+
+   - [ ] Adicione estilos globais no arquivo `globals.css`.
+   - [ ] Crie estilos específicos para componentes conforme necessário.
+
+6. **Testes**
+
+   - [ ] Configure e escreva testes para os componentes e funcionalidades principais.
+
+7. **Deploy**
+   - [ ] Configure o ambiente de produção.
+   - [ ] Realize o deploy utilizando a plataforma de sua escolha (ex.: Vercel).
+
+## Como Usar Este Template
+
+1. Clone este repositório:
+   ```bash
+   git clone <url-do-repositorio>
+   ```
