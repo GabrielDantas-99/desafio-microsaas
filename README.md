@@ -9,6 +9,7 @@ A estrutura do projeto foi projetada para ser modular e escalável, contendo as 
 - `app/`: Contém os componentes e páginas principais do projeto.
 - `public/`: Arquivos estáticos como imagens e ícones.
 - `server/`: Lógica do servidor e APIs.
+- `api/`: Lógica de acesso a requisições, parametros e respostas.
 - `lib/`: Funções utilitárias e bibliotecas customizadas.
 - `hooks/`: Hooks personalizados para reutilização de lógica.
 - `components/`: Componentes reutilizáveis da interface.
